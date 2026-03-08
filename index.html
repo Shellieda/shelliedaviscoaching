@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Abundant Baby Method | Shellie Davis, MS, CCC-SLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #faf6f0;
+      --cream-dark: #f2ebe0;
+      --gold:       #c9a96e;
+      --gold-light: #e8d5b0;
+      --gold-dark:  #a07840;
+      --rose:       #d4a5a0;
+      --rose-light: #ede0dd;
+      --rose-dark:  #b07870;
+      --sage:       #8fa888;
+      --sage-light: #d6e3d3;
+      --sage-dark:  #5f7a5a;
+      --charcoal:   #3a3530;
+      --warm-gray:  #524840;
+      --serif:      'Cormorant Garamond', Georgia, serif;
+      --sans:       'Jost', 'Helvetica Neue', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── UTILITIES ────────────────────────────── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+    .container--wide { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    .section-label {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.6rem auto;
+    }
+
+    .divider--left { margin-left: 0; }
+
+    /* ── BUTTONS ──────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2.4rem;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn--gold {
+      background: var(--gold);
+      color: #fff;
+    }
+    .btn--gold:hover { background: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(160,120,64,0.28); }
+
+    .btn--outline {
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+    }
+    .btn--outline:hover { background: var(--gold); color: #fff; transform: translateY(-1px); }
+
+    .btn--rose {
+      background: var(--rose);
+      color: #fff;
+    }
+    .btn--rose:hover { background: var(--rose-dark); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(176,120,112,0.28); }
+
+    /* ── NAV ──────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gold-light);
+      padding: 1.2rem 0;
+    }
+
+    nav .container--wide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--warm-gray);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ─────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 8rem 2rem 6rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,169,110,0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 80% 100%, rgba(212,165,160,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 10% 60%, rgba(143,168,136,0.08) 0%, transparent 60%),
+        var(--cream);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      color: var(--charcoal);
+      max-width: 780px;
+      margin: 0 auto 1.8rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--warm-gray);
+      max-width: 520px;
+      margin: 0 auto 2.8rem;
+      font-weight: 300;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-trust {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--warm-gray);
+      opacity: 0.75;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+
+    /* ── SITE QUOTE ───────────────────────────── */
+    #site-quote {
+      padding: 5rem 0;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .site-quote-line {
+      width: 120px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    .site-quote-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--charcoal);
+      line-height: 1.55;
+      max-width: 680px;
+      margin: 2.2rem auto;
+      letter-spacing: 0.01em;
+    }
+
+    .site-quote-attribution {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.2rem;
+    }
+
+    /* ── ABOUT ────────────────────────────────── */
+    #about {
+      padding: 7rem 0;
+      background: var(--cream-dark);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image-placeholder {
+      width: 100%;
+      padding-bottom: 125%;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image-placeholder img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-image-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--gold);
+      color: #fff;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 0.8rem;
+      line-height: 1.3;
+      padding: 0.5rem;
+      box-shadow: 0 8px 30px rgba(160,120,64,0.3);
+    }
+
+    .about-image-badge strong { font-size: 1.3rem; display: block; }
+
+    .about-content h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.25;
+      margin-bottom: 1.4rem;
+      color: var(--charcoal);
+    }
+
+    .about-content p {
+      color: var(--warm-gray);
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+
+    .credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 2rem;
+    }
+
+    .credential-pill {
+      background: var(--cream);
+      border: 1px solid var(--gold-light);
+      color: var(--gold-dark);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+    }
+
+    .about-pullquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      color: var(--charcoal);
+      border-left: 3px solid var(--gold);
+      padding: 0.8rem 0 0.8rem 1.4rem;
+      margin: 1.6rem 0;
+    }
+
+    .about-pullquote span {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.6rem;
+    }
+
+    .research-list {
+      list-style: none;
+      margin: 1.2rem 0 1.6rem;
+    }
+
+    .research-list li {
+      font-size: 0.88rem;
+      color: var(--warm-gray);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(201,169,110,0.18);
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      line-height: 1.55;
+    }
+
+    .research-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.55em;
+    }
+
+    .about-closing {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.65;
+      margin-top: 1.4rem;
+    }
+
+    /* ── THE PROBLEM ──────────────────────────── */
+    #problem {
+      padding: 7rem 0;
+      background: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    #problem .section-label { color: var(--gold-light); }
+
+    #problem h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      line-height: 1.3;
+      margin-bottom: 3rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+    }
+
+    .problem-phrases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .phrase-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,169,110,0.25);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+    }
+
+    .phrase-quote {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .phrase-effect {
+      font-size: 0.8rem;
+      color: rgba(250,246,240,0.75);
+      letter-spacing: 0.08em;
+    }
+
+    .problem-close {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-weight: 300;
+      color: var(--cream);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .problem-close em {
+      color: var(--rose);
+      font-style: italic;
+    }
+
+    /* ── OFFERS ───────────────────────────────── */
+    #offers {
+      padding: 7rem 0;
+      background: var(--cream);
+    }
+
+    #offers .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    #offers h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--charcoal);
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .offer-card {
+      border-radius: 6px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-card--entry {
+      background: var(--cream-dark);
+      border: 1px solid var(--gold-light);
+    }
+
+    .offer-card--premium {
+      background: var(--charcoal);
+      color: var(--cream);
+    }
+
+    .offer-card--premium .offer-label { color: var(--gold-light); }
+    .offer-card--premium h3 { color: #fff; }
+    .offer-card--premium p { color: rgba(250,246,240,0.82); }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .offer-card--entry::before { background: var(--gold); }
+    .offer-card--premium::before { background: linear-gradient(90deg, var(--gold), var(--rose)); }
+
+    .offer-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .offer-card h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-price {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin: 1.2rem 0;
+    }
+
+    .offer-price span {
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    .offer-card p {
+      font-size: 0.92rem;
+      color: var(--warm-gray);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .offer-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .offer-features li {
+      font-size: 0.88rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--warm-gray);
+    }
+
+    .offer-card--premium .offer-features li { color: rgba(250,246,240,0.7); border-color: rgba(255,255,255,0.1); }
+
+    .offer-features li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── PRIVATE COACHING ────────────────────── */
+    #coaching {
+      padding: 7rem 0;
+      background: var(--cream-dark);
+    }
+
+    #coaching .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    #coaching .section-header h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--charcoal);
+    }
+
+    .coaching-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--charcoal);
+      color: var(--cream);
+      border-radius: 6px;
+      padding: 4rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coaching-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--rose), var(--sage));
+    }
+
+    .coaching-card .offer-label { color: var(--rose-light); }
+    .coaching-card h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .coaching-price {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin: 1.2rem 0 0.4rem;
+    }
+
+    .coaching-price-note {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: rgba(250,246,240,0.65);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .coaching-transformation {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(250,246,240,0.85);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 0 1rem 1.6rem;
+      margin: 1.8rem 0 2rem;
+    }
+
+    .coaching-includes {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .coaching-includes li {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,169,110,0.25);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      padding: 0.4rem 1rem;
+    }
+
+    /* ── APPLICATION ──────────────────────────── */
+    #apply {
+      padding: 7rem 0;
+      background: var(--cream);
+    }
+
+    #apply .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    #apply .section-header h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--charcoal);
+    }
+
+    #apply .section-header p {
+      color: var(--warm-gray);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 1rem auto 0;
+    }
+
+    .apply-form {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .apply-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .apply-field label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+    }
+
+    .apply-field input,
+    .apply-field textarea {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--cream-dark);
+      border: 1px solid var(--gold-light);
+      border-radius: 2px;
+      padding: 0.9rem 1.2rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      resize: vertical;
+    }
+
+    .apply-field input:focus,
+    .apply-field textarea:focus { border-color: var(--gold); }
+    .apply-field input::placeholder,
+    .apply-field textarea::placeholder { color: var(--warm-gray); opacity: 0.5; }
+
+    .apply-field textarea { min-height: 100px; }
+
+    /* ── PERFECTIONISM DETOX ──────────────────── */
+    #perfectionism {
+      padding: 7rem 0;
+      background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream) 50%, var(--rose-light) 100%);
+      text-align: center;
+    }
+
+    #perfectionism h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--charcoal);
+      max-width: 600px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.3;
+    }
+
+    #perfectionism p {
+      color: var(--warm-gray);
+      max-width: 460px;
+      margin: 0 auto;
+      font-size: 0.97rem;
+    }
+
+    /* ── OPT-IN ───────────────────────────────── */
+    #optin {
+      padding: 7rem 0;
+      background: var(--cream-dark);
+    }
+
+    .optin-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .optin-content h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1.3;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+    }
+
+    .optin-content p {
+      color: var(--warm-gray);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .optin-guide-preview {
+      background: var(--cream);
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .guide-icon {
+      width: 80px;
+      height: 100px;
+      background: linear-gradient(145deg, var(--gold-light), var(--rose-light));
+      border-radius: 4px;
+      margin: 0 auto 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      color: var(--gold-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      writing-mode: horizontal-tb;
+      box-shadow: 4px 4px 0 var(--gold-light), 8px 8px 0 rgba(201,169,110,0.15);
+    }
+
+    .guide-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    .guide-sub {
+      font-size: 0.78rem;
+      color: var(--warm-gray);
+      letter-spacing: 0.06em;
+    }
+
+    .optin-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .optin-form input {
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--cream);
+      border: 1px solid var(--gold-light);
+      border-radius: 2px;
+      padding: 0.9rem 1.2rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .optin-form input:focus { border-color: var(--gold); }
+    .optin-form input::placeholder { color: var(--warm-gray); opacity: 0.6; }
+
+    .optin-form button { width: 100%; }
+
+    .optin-privacy {
+      font-size: 0.7rem;
+      color: var(--warm-gray);
+      opacity: 0.65;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ── FOOTER ───────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      color: rgba(250,246,240,0.72);
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-tagline {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(250,246,240,0.72);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--rose);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      transition: opacity 0.2s;
+    }
+    .footer-instagram:hover { opacity: 0.75; }
+
+    .instagram-icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-creds {
+      font-size: 0.7rem;
+      margin-top: 0.4rem;
+      color: var(--gold-light);
+      opacity: 0.6;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .about-grid,
+      .offers-grid,
+      .optin-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .problem-phrases { grid-template-columns: 1fr; }
+      .about-image-badge { bottom: -1rem; right: -0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container--wide">
+      <a href="#hero" class="nav-logo">The <span>Abundant Baby</span> Method</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#offers">Work With Me</a></li>
+        <li><a href="#coaching">Private Coaching</a></li>
+        <li><a href="#perfectionism">Free Guide</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Shellie Davis, MS, CCC-SLP &nbsp;&bull;&nbsp; The I Want Expert</p>
+      <h1 class="hero-headline">
+        Children don&rsquo;t learn money from budgets. They learn it from how their desires are <em>met, delayed, dismissed, or expanded.</em>
+      </h1>
+      <p class="hero-sub">
+        The language your child hears between ages 0&ndash;7 becomes the voice inside their head&mdash;forever. Science says you have a window. Let&rsquo;s use it.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#offers" class="btn btn--gold">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- VYGOTSKY QUOTE -->
+  <section id="site-quote">
+    <div class="container">
+      <div class="site-quote-line"></div>
+      <p class="site-quote-text">&ldquo;Children grow into the intellectual life around them.&rdquo;</p>
+      <p class="site-quote-attribution">&mdash; Lev Vygotsky</p>
+      <div class="site-quote-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-image-placeholder">
+            <img src="img_1969.jpeg" alt="Shellie Davis, MS, CCC-SLP" />
+          </div>
+          <div class="about-image-badge">
+            <strong>10+</strong>
+            Years Pediatric<br/>Experience
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">Meet Shellie</span>
+          <h2>It Started in My Backyard.</h2>
+          <div class="divider divider--left"></div>
+          <p>
+            My daughter Helena&mdash;20 months old&mdash;stood at the top of her slide and whispered to herself: <em>&ldquo;Stay in middle.&rdquo;</em>
+          </p>
+          <div class="about-pullquote">
+            My words. In her tiny voice. Already her internal dialogue.
+          </div>
+          <p>
+            I&rsquo;m Shellie Davis, CCC-SLP&mdash;a certified Speech-Language Pathologist with over 10 years of pediatric clinical experience. I knew exactly what I was witnessing: language becoming neural architecture. But knowing it clinically and <strong>feeling</strong> it as a mother are two completely different things.
+          </p>
+          <p>
+            That moment sent me into the research. Suniya Luthar&rsquo;s work on wealthy children and anxiety. Brad Klontz on how childhood money beliefs operate unconsciously into adulthood. Carol Dweck on mindset. The Williams Group findings that 70% of wealth is lost by the second generation&mdash;60% due to communication breakdown, not bad investments. Brain imaging showing parent-child language literally rewires neural pathways during ages 0&ndash;7.
+          </p>
+          <p>
+            Nobody had connected these dots into a prevention framework. Nobody with clinical credentials was targeting the exact developmental window&mdash;ages 0&ndash;7&mdash;when these beliefs are being hardwired.
+          </p>
+          <p class="about-closing">
+            The Abundant Baby Method is that framework. It&rsquo;s not theory. It&rsquo;s applied clinical science backed by decades of research across neuroscience, financial psychology, attachment theory, and child development.
+          </p>
+          <div class="credentials">
+            <span class="credential-pill">MS, CCC-SLP</span>
+            <span class="credential-pill">ASHA Certified</span>
+            <span class="credential-pill">Pediatric Specialist</span>
+            <span class="credential-pill">Abundance Coach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <span class="section-label">The Hidden Pattern</span>
+      <h2>Right Now, You Might Be Saying&hellip;</h2>
+      <div class="problem-phrases">
+        <div class="phrase-card">
+          <p class="phrase-quote">&ldquo;We can&rsquo;t afford that.&rdquo;</p>
+          <p class="phrase-effect">Even when you can &mdash; wiring scarcity as identity</p>
+        </div>
+        <div class="phrase-card">
+          <p class="phrase-quote">&ldquo;Good job!&rdquo;</p>
+          <p class="phrase-effect">Programming performance-based worth &amp; perfectionism</p>
+        </div>
+        <div class="phrase-card">
+          <p class="phrase-quote">&ldquo;You&rsquo;re so smart!&rdquo;</p>
+          <p class="phrase-effect">Creating a fixed mindset &mdash; the enemy of resilience</p>
+        </div>
+      </div>
+      <p class="problem-close">
+        These phrases don&rsquo;t disappear when childhood ends.<br/>
+        They become your child&rsquo;s <em>inner voice. Forever.</em><br/>
+        <br/>
+        The good news? You can change the program&mdash;starting today.
+      </p>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section id="offers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Work With Shellie</span>
+        <h2>Choose Your Path to Abundant Parenting</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="offers-grid">
+
+        <div class="offer-card offer-card--entry">
+          <span class="offer-label">Digital Download</span>
+          <h3>Connection vs. Control Framework</h3>
+          <div class="offer-price">$47 <span>one-time</span></div>
+          <p>A 10-minute training on the two pathways &mdash; connection and control &mdash; so you always know which moment you&rsquo;re in. Includes scripts for common scenarios, FAQ, and Why This Matters guide. Stops guilt, over-talking, and fake-poor language at the root.</p>
+          <a href="#" class="btn btn--outline">Get Instant Access &rarr;</a>
+        </div>
+
+        <div class="offer-card offer-card--premium">
+          <span class="offer-label">7-Day Audio Experience</span>
+          <h3>Abundance Language Audit</h3>
+          <div class="offer-price">$397 <span>one-time</span></div>
+          <p>7 days of guided audio support paired with the No Audit tracker. You do the diagnostic work of uncovering why you say no so much &mdash; guided by Shellie&rsquo;s voice every step. Not a personalized service. A structured self-discovery experience that changes how you hear yourself.</p>
+          <a href="#" class="btn btn--gold">Get Instant Access &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE COACHING -->
+  <section id="coaching">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Private Coaching</span>
+        <h2>The Deepest Work</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="coaching-card">
+        <span class="offer-label">Beta &mdash; Limited Spots</span>
+        <h3>Abundance Language Coaching</h3>
+        <div class="coaching-price">$2,500 <span style="font-size:1rem;opacity:0.6;">beta</span></div>
+        <p class="coaching-price-note">Becomes $5,000 &nbsp;&bull;&nbsp; Lock in beta pricing now</p>
+        <div class="coaching-transformation">
+          Six months from now you are the mother your child organizes their entire nervous system around. You know exactly what to say when they want something. You know how to praise without programming perfectionism. You know how to speak agency, grit, gratitude, and growth mindset in ways that become their inner voice. Not because you memorized scripts. Because you understand your child.
+        </div>
+        <ul class="coaching-includes">
+          <li>6 months</li>
+          <li>Monthly 30-min private sessions</li>
+          <li>Voice note support</li>
+          <li>All courses &amp; frameworks included</li>
+        </ul>
+        <a href="#apply" class="btn btn--gold">Apply for a Spot &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION -->
+  <section id="apply">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Private Coaching Application</span>
+        <h2>Tell Me About Your Family</h2>
+        <div class="divider"></div>
+        <p>This is not a sales call. It&rsquo;s a short form so I can understand where you are before we talk.</p>
+      </div>
+      <form class="apply-form" onsubmit="return false;">
+        <div class="apply-field">
+          <label for="apply-name">First name</label>
+          <input type="text" id="apply-name" placeholder="Your first name" />
+        </div>
+        <div class="apply-field">
+          <label for="apply-ages">Child&rsquo;s age(s)</label>
+          <input type="text" id="apply-ages" placeholder="e.g. 2 and 5" />
+        </div>
+        <div class="apply-field">
+          <label for="apply-struggle">What&rsquo;s your biggest struggle in &ldquo;I want&rdquo; moments right now?</label>
+          <textarea id="apply-struggle" placeholder="Be as specific as you&rsquo;d like&hellip;"></textarea>
+        </div>
+        <div class="apply-field">
+          <label for="apply-reach">What made you reach out today?</label>
+          <textarea id="apply-reach" placeholder="What brought you here&hellip;"></textarea>
+        </div>
+        <div class="apply-field">
+          <label for="apply-email">Email address</label>
+          <input type="email" id="apply-email" placeholder="Your best email address" />
+        </div>
+        <button type="submit" class="btn btn--gold" style="margin-top:0.6rem;">Submit My Application &rarr;</button>
+        <p class="optin-privacy">Your application is private. Shellie reads every one personally.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- PERFECTIONISM DETOX OPT-IN -->
+  <section id="perfectionism">
+    <div class="container">
+      <span class="section-label">Free Guide</span>
+      <h2>Is Your Language Creating a Perfectionist?</h2>
+      <p>Get the free Perfectionism Detox guide and find out.</p>
+      <form class="optin-form" style="max-width:420px;margin:2rem auto 0;" onsubmit="return false;">
+        <input type="text" placeholder="Your first name" />
+        <input type="email" placeholder="Your best email address" />
+        <button type="submit" class="btn btn--gold">Send Me the Guide &rarr;</button>
+      </form>
+      <p class="optin-privacy" style="margin-top:1rem;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">The Abundant Baby Method</div>
+      <div class="footer-tagline">The I Want Expert</div>
+      <a href="https://instagram.com/abundant_baby_method" target="_blank" rel="noopener" class="footer-instagram">
+        <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        @abundant_baby_method
+      </a>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#offers">Work With Me</a>
+        <a href="#coaching">Private Coaching</a>
+        <a href="#perfectionism">Free Guide</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shellie Davis Coaching. All rights reserved.</p>
+      <p class="footer-creds">Shellie Davis, MS, CCC-SLP &nbsp;&bull;&nbsp; Creator of The Abundant Baby Method</p>
+    </div>
+  </footer>
+
+</body>
+</html>
