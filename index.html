@@ -784,34 +784,6 @@
       font-size: 0.97rem;
     }
 
-    .perfectionism-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      max-width: 400px;
-      margin: 2.2rem auto 0;
-    }
-
-    .perfectionism-form input {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--charcoal);
-      background: var(--cream);
-      border: 1px solid var(--gold-light);
-      border-radius: 2px;
-      padding: 0.9rem 1.2rem;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-
-    .perfectionism-form input:focus { border-color: var(--gold); }
-    .perfectionism-form input::placeholder { color: var(--warm-gray); opacity: 0.6; }
-
-    .perfectionism-form .btn { width: 100%; text-align: center; }
-
     /* ── OPT-IN ───────────────────────────────── */
     #optin {
       padding: 7rem 0;
@@ -1213,11 +1185,16 @@
       <span class="section-label">Free Guide</span>
       <h2>Is Your Language Creating a Perfectionist?</h2>
       <p>Get the free Perfectionism Detox guide and find out.</p>
-      <form class="perfectionism-form" action="https://abundant-baby-method.kit.com/74cde5e412/subscriptions" method="post" target="_blank">
-        <input type="text" name="fields[first_name]" placeholder="Your first name" required>
-        <input type="email" name="email_address" placeholder="Your best email address" required>
-        <button type="submit" class="btn btn--gold">Send Me the Guide &rarr;</button>
-      </form>
+      <div id="kit-form-container" style="width:100%; min-height:100px;"></div>
+      <script>
+        (function() {
+          var s = document.createElement('script');
+          s.src = 'https://abundant-baby-method.kit.com/74cde5e412/index.js';
+          s.setAttribute('data-uid', '74cde5e412');
+          s.async = true;
+          document.getElementById('kit-form-container').appendChild(s);
+        })();
+      </script>
     </div>
   </section>
 
